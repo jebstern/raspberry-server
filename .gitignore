@@ -116,6 +116,4 @@ out
 
 
 node_modules
-
-# tsc currently not working on raspberry -> get dist from laptop
-#dist/
+dist/

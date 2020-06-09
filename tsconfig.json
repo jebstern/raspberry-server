@@ -13,7 +13,6 @@
     "removeComments": false,
     "outDir": "dist"
   },
-  "include": ["./types/node-ruuvitag/index.d.ts"],
-  "typeRoots": ["./types", "node_modules/@types"],
+  "typeRoots": ["node_modules/@types"],
   "exclude": [".git", "node_modules"]
 }
