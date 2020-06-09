@@ -117,4 +117,6 @@ dist
 
 
 node_modules
-dist/
+
+# tsc currently not working on raspberry -> get dist from laptop
+#dist/
