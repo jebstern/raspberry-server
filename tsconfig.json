@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noEmit": false,
+    "noEmitOnError": true,
+    "target": "es2020",
+    "lib": ["es2018", "dom"],
+    "noImplicitAny": true,
+    "sourceMap": false,
+    "rootDir": "./",
+    "removeComments": false,
+    "outDir": "dist"
+  },
+  "include": ["./types/node-ruuvitag/index.d.ts"],
+  "typeRoots": ["./types", "node_modules/@types"],
+  "exclude": [".git", "node_modules"]
+}
