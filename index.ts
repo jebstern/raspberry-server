@@ -1,17 +1,22 @@
-export {}
 import express from 'express'
 import { json, urlencoded } from 'body-parser'
 const ruuvi = require('node-ruuvitag')
 import mongoose from 'mongoose'
 import Ruuvitag from './models/ruuvitag'
-const app: express.Application = express()
-const port = process.env.PORT || 3100
 import { ruuvitagRouter } from './routes'
 import { RuuvitagModel } from './models/ruuvitag'
 import { Request, Response, NextFunction } from 'express'
+import dotenv from 'dotenv'
+dotenv.config()
+const app: express.Application = express()
+const port = 3100
+
+const DB_USER_NAME = process.env.DB_USER_NAME
+const DB_USER_PASSWORD = process.env.DB_USER_PASSWORD
+const DB_URL = `mongodb+srv://${DB_USER_NAME}:${DB_USER_PASSWORD}@cluster0-z1tm1.mongodb.net/raspberry-server?retryWrites=true&w=majority`
 
 mongoose
-  .connect('mongodb://localhost/raspberry-server', {
+  .connect(DB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
